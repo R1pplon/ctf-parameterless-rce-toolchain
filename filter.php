@@ -17,14 +17,14 @@ function main() {
 
 
     // 是否启用黑名单（true启用，false禁用）
-    $enableBlacklist = true;
+    $enableBlacklist = false;
     if ($enableBlacklist){
         echo "启用黑名单:";
         echo print_r($blacklist). PHP_EOL;
     }
 
     // 是否启用白名单（true启用，false禁用）
-    $enableWhitelist = true;
+    $enableWhitelist = false;
     if ($enableWhitelist){
         echo "启用白名单:";
         echo print_r($whitelist). PHP_EOL;
