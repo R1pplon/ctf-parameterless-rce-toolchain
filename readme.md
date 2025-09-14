@@ -167,7 +167,7 @@ Connection: keep-alive
 ### 步骤5：执行Fuzz攻击
 
 ```bash
-python .\fuzz_Parameterless_RCE.py .\config.json
+python .\fuzz_Parameterless_RCE.py
 ```
 
 输出：
