@@ -1,0 +1,9 @@
+{
+  "key_words": [
+    "flag{","ctf{"
+  ],
+  "http_method": "GET",
+  "param": "exp",
+  "payload_dir": "./payload_202509141845.txt",
+  "Request_Packet_dir": "./request.txt"
+}

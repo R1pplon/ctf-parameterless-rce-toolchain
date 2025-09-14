@@ -1,0 +1,3 @@
+if (!preg_match('/data:\/\/|filter:\/\/|php:\/\/|phar:\/\//i', $_GET['exp']))
+if(';' === preg_replace('/[a-z,_]+\((?R)?\)/', NULL, $_GET['exp']))
+if (!preg_match('/et|na|info|dec|bin|hex|oct|pi|log/i', $_GET['exp']))
