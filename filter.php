@@ -3,18 +3,6 @@
  * 主函数：执行payload过滤流程
  */
 function main() {
-    // 读取过滤条件和payload
-    $filters = readFileLines('./过滤条件.txt');
-    $payloads = readFileLines('./Parameterless_RCE_payload.txt');
-
-    // 定义黑名单
-    $blacklist = [' ','\t','\r','\n','\+','\[','\^','\]','\"','\-','\$','\*','\?','\<','\>','\=','\`',];
-
-    // 定义白名单（可以是字符串或数组）
-    $whitelist = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_();";
-    // 或者使用数组形式：
-    // $whitelist = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z','0','1','2','3','4','5','6','7','8','9','_','(',')'];
-
 
     // 是否启用黑名单（true启用，false禁用）
     $enableBlacklist = false;
@@ -29,6 +17,18 @@ function main() {
         echo "启用白名单:";
         echo print_r($whitelist). PHP_EOL;
     }
+
+    // 读取过滤条件和payload
+    $filters = readFileLines('./过滤条件.txt');
+    $payloads = readFileLines('./Parameterless_RCE_payload.txt');
+
+    // 定义黑名单
+    $blacklist = [' ','\t','\r','\n','\+','\[','\^','\]','\"','\-','\$','\*','\?','\<','\>','\=','\`',];
+
+    // 定义白名单（可以是字符串或数组）
+    $whitelist = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_();";
+    // 或者使用数组形式：
+    // $whitelist = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z','0','1','2','3','4','5','6','7','8','9','_','(',')'];
 
     // 创建唯一文件名
     $filename = 'payload_' . date('Ymd_His') . '.txt';
